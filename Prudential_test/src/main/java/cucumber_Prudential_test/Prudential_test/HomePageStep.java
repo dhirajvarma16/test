@@ -22,9 +22,9 @@ public class HomePageStep {
 	WebDriverWait wait=new WebDriverWait(driver,20);
 	@Given("^User navigates to openweathermap website$")
 	public void user_navigates_to_openweathermap_website() throws Throwable{
-		System.setProperty("webdriver.chrome.driver","/Users/naveenkhunteta/Downloads/chromedriver");
+		System.setProperty("webdriver.chrome.driver","F:\\stuff\\Chromedriver.exe");
 		 driver = new ChromeDriver();
-		 driver.get("https://www.freecrm.com/index.html");
+		 driver.get("https://openweathermap.org/");
 
 	}
 	
@@ -32,7 +32,7 @@ public class HomePageStep {
 	public void user_pageTitle() throws Throwable{
 		String title = driver.getTitle();
 		 System.out.println(title);
-		 Assert.assertEquals("#1 Free CRM for Any Business: Online Customer Relationship Software", title);
+		 Assert.assertEquals("Сurrent weather and forecast - OpenWeatherMap", title);
 	}
 	
 	@Then("^User perform all the activities$")
